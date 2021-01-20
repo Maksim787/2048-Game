@@ -9,7 +9,6 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(static_cast<unsigned int>(screenX), static_cast<unsigned int>(screenY)), "2048");
     const float blockSize = 100;
     const float lineThickness = 10;
-    window.setFramerateLimit(50);
     while (window.isOpen()) {
         std::cout << "Starting game!\n";
         bool gameOver = false;
@@ -26,12 +25,12 @@ int main() {
                 case sf::Event::Closed:
                     window.close();
                     break;
-                //case sf::Event::LostFocus:
-                //    pause = true;
-                //    break;
-                //case sf::Event::GainedFocus:
-                //    pause = false;
-                //    break;
+                    //case sf::Event::LostFocus:
+                    //    pause = true;
+                    //    break;
+                    //case sf::Event::GainedFocus:
+                    //    pause = false;
+                    //    break;
                 case sf::Event::KeyPressed:
                     switch (event.key.code) {
                     case sf::Keyboard::Escape:

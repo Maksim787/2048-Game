@@ -74,6 +74,7 @@ State Grid::getState() {
 void Grid::setState(const State& state) {
     grid = state.grid;
     gameOver = false;
+    pause = false;
 }
 void Grid::undo() {
     if (!history.empty())
