@@ -67,8 +67,8 @@ int main() {
             }
             float elapsedTime = clock.restart().asSeconds();
             if (pause) continue;
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add)) bot.setSpeed(bot.getSpeed() * 1.03);
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract)) bot.setSpeed(bot.getSpeed() * 0.97);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add)) bot.setSpeed(bot.getSpeed() + 30 * elapsedTime);
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract)) bot.setSpeed(bot.getSpeed() - 30 * elapsedTime);
             if (useAI && bot.addElapsedTime(elapsedTime)) grid.move(bot.getTurn());
             window.clear();
             grid.draw();
