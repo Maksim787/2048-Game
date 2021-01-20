@@ -6,7 +6,7 @@
 
 ## Usage
 ### Control
-- Grid moving - **LeftArrow, RightArrow, UpArrow, DownArrow**
+- Moving - **LeftArrow, RightArrow, UpArrow, DownArrow**
 
 ### General
 - Exit - **Esc**
@@ -14,3 +14,4 @@
 - Pause - **P** or **Space**
 - Undo moving - **U**
 - Enable/Disable bot - **A**
+- Increase/Decrease bot speed - **+**, **-**
