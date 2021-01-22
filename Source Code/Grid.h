@@ -9,6 +9,7 @@ public:
     void transpose();
     void reverse();
     void move(enum Direction direction);
+    const std::vector<std::vector<int>>& getGrid();
     State getState();
     void setState(const State& state);
     void undo();

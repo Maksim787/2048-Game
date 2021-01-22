@@ -5,6 +5,7 @@
 #include "Bot.h"
 #include <iostream>
 
+
 int main() {
     sf::RenderWindow window(sf::VideoMode(static_cast<unsigned int>(screenX), static_cast<unsigned int>(screenY)), "2048");
     const float blockSize = 100;
@@ -17,7 +18,9 @@ int main() {
         sf::Clock clock;
         BlockDrawer blockDrawer(window, sf::Vector2f(0, 0), static_cast<int>(screenX / blockSize), blockSize, lineThickness);
         Grid grid(window, blockDrawer, static_cast<int>(screenX / blockSize), gameOver, pause);
-        Bot bot(2);
+        AllDirection allDirection;
+        MostDirection mostDirection;
+        Bot bot(mostDirection, 2);
         while (window.isOpen() && (!gameOver || pause)) {
             sf::Event event;
             while (window.pollEvent(event)) {
@@ -69,7 +72,7 @@ int main() {
             if (pause) continue;
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Add)) bot.setSpeed(bot.getSpeed() + 30 * elapsedTime);
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Subtract)) bot.setSpeed(bot.getSpeed() - 30 * elapsedTime);
-            if (useAI && bot.addElapsedTime(elapsedTime)) grid.move(bot.getTurn());
+            if (useAI && bot.addElapsedTime(elapsedTime)) grid.move(bot.getTurn(grid.getGrid()));
             window.clear();
             grid.draw();
             window.display();

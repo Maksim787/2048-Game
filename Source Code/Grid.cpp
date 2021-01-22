@@ -68,6 +68,9 @@ void Grid::move(enum Direction direction) {
     //std::cout << "Grid:\n";
     //print(grid);
 }
+const std::vector<std::vector<int>>& Grid::getGrid() {
+    return grid;
+}
 State Grid::getState() {
     return State(grid);
 }
