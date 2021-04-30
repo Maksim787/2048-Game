@@ -1,5 +1,7 @@
 # 2048 Game
 
+![alt text](https://github.com/Maksim787/2048-Game/Example/screenshot.jpg?raw=true)
+
 ## Installation
 - Download Release Folder
 - Open 2048.exe
