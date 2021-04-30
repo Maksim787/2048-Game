@@ -1,6 +1,6 @@
 # 2048 Game
 
-![alt text](https://github.com/Maksim787/2048-Game/Example/screenshot.jpg?raw=true)
+![alt text](https://github.com/Maksim787/2048-Game/blob/main/Example/Screenshot.png)
 
 ## Installation
 - Download Release Folder
